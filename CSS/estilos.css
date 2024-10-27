@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    background-color: bisque;
+}
+header{
+    background-color: darksalmon;
+    color: orangered;
+}
+#app{
+    border: 3px dotted #593f;
+    width: 30%;
+    height: 70%;
+    margin-left: 35%;
+}
+#UltimaVez{
+    width: 70%;
+    height: 30px;
+}
+#saborFavorito{
+    width: 70%;
+    height: 30px;
+}
+label{
+    font-size: 20px;
+}
+#cantidadTacos{
+    text-align: center;
+    width: 70%;
+    height: 18px;
+}
+p{
+    font-size: 18px;
+}
+button{
+    background-color: #f8d36f;
+    border-radius: 5px;
+    padding: 8px 15px;
+    border: 0.5px solid #ba9b44;
+    cursor: pointer;
+}

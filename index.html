@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>Directivas en Vue</title>
+    <script src="JS/vue3.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🌮 Encuesta de tacos 🌮</h1>
+    </header>
+<section id="app">
+    <h2>¿Te gustan los tacos? 😋</h2>
+    <label><input type="radio" @click="responde = 'si'" name="elegir">Si</label>
+    <label><input type="radio" @click="responde = 'no'" name="elegir">No</label>
+<br>
+    <div v-if="responde === 'si'">
+      <br>
+      <p for="cantidadTacos">{{cantidad}}</p>
+      <input type="number" v-model="cantidadTacos" id="cantidadTacos"/>
+      <br><br>
+      
+      <p for="UltimaVez">{{ultima}}</p>
+      <input type="text" id="UltimaVez" v-model="UltimaVez" placeholder="Cuéntame">
+      <br><br>
+
+
+      <p for="nuevoSabor" @keyup="tipos">{{favorito}}</p>
+      <input type="text" v-model="nuevoSabor" placeholder="Escríbelo aquí" id="saborFavorito">
+      <br><br>
+      <div>
+        <ul>
+          <li v-for="sabor in sabores" :key="sabor">{{sabor}}</li>
+        </ul>
+        <button id="btnAgregar" @click="agregarSabor">Agregar</button><br>
+      </div>
+
+    </div>
+    <div v-else-if="responde === 'no'">
+       <p>Te falta cultura pa🤠</p> 
+    </div>
+    
+  </section>      
+
+<script src="JS/main.js"></script>
+    
+</body>
+</html>
